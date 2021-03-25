@@ -1,0 +1,59 @@
+.pin {
+    position: relative;
+    margin: .5rem .2rem 0 0;
+    z-index: 1;
+
+    &__image:hover~&__icon { 
+        opacity: 1;
+        transition: all 1s;
+
+    }
+
+    &__image { 
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        cursor: zoom-in;
+    }
+
+    &__icon {
+        &:hover { 
+            opacity: 1;
+        }
+        opacity: 0;
+        &--save { 
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            text-decoration: none;
+            padding: .8rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: brown;
+            border-radius: 1rem;
+        }
+
+        &--download { 
+            position: absolute;
+            background-color: #fff;
+            bottom: 1rem;
+            right: 4rem;
+            padding: .5rem;
+            border-radius: 50%;
+            line-height: 0;
+            color: #000000;
+        }
+
+        &--action { 
+            position: absolute;
+            background-color: #fff;
+            bottom: 1rem;
+            right: 1rem;
+            padding: .5rem;
+            border-radius: 50%;
+            line-height: 0;
+            color: #000000;
+        }
+       
+    }
+}
