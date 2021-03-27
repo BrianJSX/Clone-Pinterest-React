@@ -1,12 +1,29 @@
-import React from "react";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import Avatar from "@material-ui/core/Avatar";
+import ChatIcon from "@material-ui/icons/Chat";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 import SearchIcon from "@material-ui/icons/Search";
-import ChatIcon from '@material-ui/icons/Chat';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import Notification from "../../features/Notification";
+import Message from "../../features/Message";
+
 import "./style.scss";
 
 function Header() {
+  const [notification, setNotification] = useState(false);
+  const [message, setMessage] = useState(false);
+
+  const handleNotification = () => {
+    setNotification(!notification);
+    setMessage(false);
+  };
+
+  const handelMessage = () => {
+    setMessage(!message);
+    setNotification(false);
+  };
+
   return (
     <div className="header">
       <div className="navigation">
@@ -19,8 +36,20 @@ function Header() {
         </div>
         <div className="navigation__nav">
           <ul className="navigation__nav-list">
-            <li className="navigation__nav-item active"><b>Trang chủ</b></li>
-            <li className="navigation__nav-item"><b>Người theo đang dõi bạn</b></li>
+            <NavLink
+              to="/"
+              className="navigation__nav-item"
+              activeClassName="active"
+            >
+              Trang chủ
+            </NavLink>
+            <NavLink
+              to="/flowpage"
+              className="navigation__nav-item"
+              activeClassName="active"
+            >
+              Người theo dõi bạn
+            </NavLink>
           </ul>
         </div>
         <div className="navigation__search">
@@ -28,16 +57,25 @@ function Header() {
             <SearchIcon></SearchIcon>
           </div>
           <div className="navigation__search-input">
-            <input type="text" placeholder="Tìm kiếm" className="input-search" />
+            <input
+              type="text"
+              placeholder="Tìm kiếm"
+              className="input-search"
+            />
           </div>
         </div>
         <div className="navigation__action">
           <div className="navigation__action-item">
-            <NotificationsIcon></NotificationsIcon>
+            <div onClick={handleNotification}>
+              <NotificationsIcon></NotificationsIcon>
+            </div>
+            {notification && <Notification></Notification>}
           </div>
-
           <div className="navigation__action-item">
-            <ChatIcon></ChatIcon>
+            <div onClick={handelMessage}>
+              <ChatIcon></ChatIcon>
+            </div>
+            {message && <Message></Message>}
           </div>
           <div className="navigation__action-item">
             <Avatar className="avatar-icon"></Avatar>

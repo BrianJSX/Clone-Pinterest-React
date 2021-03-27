@@ -3,6 +3,13 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 4000;
+    background-color: #fff;
+
     &__logo { 
         padding: 0;
         &-box{
@@ -27,6 +34,8 @@
             font-size: 1rem;
             margin-right: 0.2rem;
             border-radius: 2rem;
+            color: #000000;
+            font-weight: bold;
             &:hover {
                 background-color: #f1f1f1;
                 cursor: pointer;
@@ -67,6 +76,7 @@
         align-items: center;
         flex-direction: row;
         line-height: 0 !important;
+        
         &-item {
             position: relative;
             margin: 0 .2rem;
@@ -81,6 +91,7 @@
             }
         }
     }
+
     @media screen and (max-width: 992px) {
         &__nav {
             display: none;
@@ -96,7 +107,7 @@
     color: #fff;
 }
 .avatar-icon { 
-    width: 2.5rem !important;
-    height: 2rem !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
 }
 

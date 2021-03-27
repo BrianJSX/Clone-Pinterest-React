@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Pin from "../features/Pin";
-import pexelApi from "../api/PexelApi";
 import { useDispatch, useSelector } from "react-redux";
 import {fetchPin} from '../features/Pin/pinSlice';
 
@@ -9,7 +8,10 @@ export default function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPin());
+    const dispatchAction = () => { 
+      dispatch(fetchPin());
+    }
+    dispatchAction();
   }, []);
 
   return (

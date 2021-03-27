@@ -11,17 +11,17 @@ export default function App() {
   const uiLoading = useSelector((state) => state.uiLoading.loading);
 
   useEffect(() => {
-    const setLoadingIndex  = () =>{ 
+    const setLoadingIndex = () => {
       setLoading(uiLoading);
-    }
+    };
     setLoadingIndex();
   });
 
   return (
     <div>
-      <Header></Header>
-      { loading && <UiLoading></UiLoading>}
       <Router>
+        <Header></Header>
+        {loading && <UiLoading></UiLoading>}
         <Switch>
           {ROUTER.map((route, index) => {
             return (
