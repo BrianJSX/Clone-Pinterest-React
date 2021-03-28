@@ -2,11 +2,11 @@ import Avatar from "@material-ui/core/Avatar";
 import ChatIcon from "@material-ui/icons/Chat";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import SearchIcon from "@material-ui/icons/Search";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Notification from "../../features/Notification";
 import Message from "../../features/Message";
+import Search from '../../features/SearchForm';
 
 import "./style.scss";
 
@@ -52,18 +52,7 @@ function Header() {
             </NavLink>
           </ul>
         </div>
-        <div className="navigation__search">
-          <div className="navigation__search-icon">
-            <SearchIcon></SearchIcon>
-          </div>
-          <div className="navigation__search-input">
-            <input
-              type="text"
-              placeholder="Tìm kiếm"
-              className="input-search"
-            />
-          </div>
-        </div>
+        <Search></Search>
         <div className="navigation__action">
           <div className="navigation__action-item">
             <div onClick={handleNotification}>

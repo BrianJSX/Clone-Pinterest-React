@@ -1,17 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState =  {
-  result: null
+const initialState = {
+  result: null,
 };
 
-const name = 'Pins';
+const name = "Pins";
 
 export const pinSlice = createSlice({
   name,
   initialState,
   reducers: {
     fetchPin: (state, action) => {
-      console.log(action);
+      return state;
     },
     fetchPinSuccess: (state, action) => {
       state.result = action.payload.photos;
@@ -19,10 +19,22 @@ export const pinSlice = createSlice({
     fetchPinFaild: (state, error) => {
       console.log(error);
     },
+    fetchPinSearch: (state, action) => {
+      return state;
+    },
+    fetchPinSearchSuccess: (state, action) => {
+      state.result = action.payload.photos;
+    },
   },
 });
 
-export const { fetchPin, fetchPinSuccess, fetchPinFaild } = pinSlice.actions;
+export const {
+  fetchPin,
+  fetchPinSuccess,
+  fetchPinFaild,
+  fetchPinSearch,
+  fetchPinSearchSuccess,
+  fetchPinSearchFail,
+} = pinSlice.actions;
 
-
-export default pinSlice.reducer
+export default pinSlice.reducer;

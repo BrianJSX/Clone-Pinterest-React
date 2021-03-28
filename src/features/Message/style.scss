@@ -8,7 +8,7 @@
     background-color: #fff;
     transform: translateX(-12rem);
     transition: all 2s;
-    animation: moveInRight 2s ease-in backwards;
+    animation: moveRightIn .2s ease-in backwards;
     color: #000000;
 
     &__header { 
@@ -62,16 +62,16 @@
         }
 
     }
-    @keyframes moveRightIn {
-        0% { 
-            transform: translateX(1000px);
-        }
-        50% { 
-            transform: translateX(80px);
-        }
-        100% { 
-            transform: translateX(0);
-        }
-        
+}
+
+@keyframes moveRightIn {
+    0% { 
+        transform: translateX(1000px);
+    }
+    50% { 
+        transform: translateX(80px);
+    }
+    100% { 
+        transform: translateX(0);
     }
 }
