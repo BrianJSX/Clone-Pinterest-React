@@ -11,13 +11,14 @@ function* watchFetchPinAction() {
     yield delay(2000);
     yield put(hiddenLoading());
 }
+
 function* watchFetchPinSearchAction({payload}) {
     yield delay(1000);
     if(payload !== "") {
         yield put(showLoading());
         const resp = yield call(pexelApi.searchParams, payload , 80);
         yield put(fetchPinSearchSuccess(resp));
-        yield delay(2000);
+        yield delay(1000);
         yield put(hiddenLoading());
     } else { 
         yield watchFetchPinAction();

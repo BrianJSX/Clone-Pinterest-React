@@ -1,0 +1,28 @@
+.MenuNav { 
+    position: absolute;
+    background-color: #fff;
+    top: 4rem;
+    transform: translateX(-280px);
+    width: 20rem;
+    padding: 1rem;
+    height: 20rem;
+    border-radius: .5rem;
+    &__title { 
+        display: block;
+    }
+    &__main {
+        margin-top: 1rem;
+        &-item{
+            display: block;
+            line-height: 1.8rem;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: .1rem;
+            color: black;
+            border-radius: .5rem;
+            &:hover { 
+                background-color: #D8D8D8;
+            }
+        }
+    }
+}

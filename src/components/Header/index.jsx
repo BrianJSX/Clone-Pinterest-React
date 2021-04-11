@@ -4,24 +4,33 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Notification from "../../features/Notification";
 import Message from "../../features/Message";
-import Search from '../../features/SearchForm';
-
+import Notification from "../../features/Notification";
+import Search from "../../features/SearchForm";
+import MenuNav from "../../features/MenuNav";
 import "./style.scss";
 
 function Header() {
   const [notification, setNotification] = useState(false);
   const [message, setMessage] = useState(false);
+  const [menuNav, setMenuNav] = useState(false);
 
   const handleNotification = () => {
     setNotification(!notification);
     setMessage(false);
+    setMenuNav(false);
   };
 
   const handelMessage = () => {
     setMessage(!message);
     setNotification(false);
+    setMenuNav(false);
+  };
+
+  const handelMenuNav = () => {
+    setMenuNav(!menuNav);
+    setNotification(false);
+    setMessage(false);
   };
 
   return (
@@ -70,7 +79,10 @@ function Header() {
             <Avatar className="avatar-icon"></Avatar>
           </div>
           <div className="navigation__action-item">
-            <ExpandMoreIcon></ExpandMoreIcon>
+            <div onClick={handelMenuNav}>
+              <ExpandMoreIcon></ExpandMoreIcon>
+            </div>
+            {menuNav && <MenuNav></MenuNav>}
           </div>
         </div>
       </div>

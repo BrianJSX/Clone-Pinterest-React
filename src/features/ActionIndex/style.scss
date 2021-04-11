@@ -1,0 +1,19 @@
+.actionIndex { 
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 7000;
+    &__addIcon { 
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 50%;
+        line-height: 0;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        font-weight: bold;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        &:hover { 
+            background-color: #EFEFEF ;
+        }
+    }
+}
