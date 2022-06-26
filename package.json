@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.21.3",
     "autoprefixer": "^10.4.7",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "dotenv": "^8.2.0",
     "node-sass": "^5.0.0",
     "pexels": "^1.0.1",
