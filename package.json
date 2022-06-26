@@ -13,7 +13,7 @@
     "autoprefixer": "^10.4.7",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "pexels": "^1.0.1",
     "postcss": "^8.4.14",
     "react": "^17.0.1",
