@@ -1,14 +1,17 @@
-import Avatar from "@material-ui/core/Avatar";
-import ChatIcon from "@material-ui/icons/Chat";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import React, { useState } from "react";
+// import Avatar from "@material-ui/core/Avatar";
+// import ChatIcon from "@material-ui/icons/Chat";
+// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+// import NotificationsIcon from "@material-ui/icons/Notifications";
+import { ChatIcon, BellIcon, ChevronDoubleDownIcon } from '@heroicons/react/solid';
+import Avatar from "antd/lib/avatar/avatar";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import MenuNav from "../../features/MenuNav";
 import Message from "../../features/Message";
 import Notification from "../../features/Notification";
 import Search from "../../features/SearchForm";
-import MenuNav from "../../features/MenuNav";
 import "./style.scss";
+
 
 function Header() {
   const [notification, setNotification] = useState(false);
@@ -64,23 +67,23 @@ function Header() {
         <Search></Search>
         <div className="navigation__action">
           <div className="navigation__action-item">
-            <div onClick={handleNotification}>
-              <NotificationsIcon></NotificationsIcon>
+            <div onClick={handleNotification} >
+              <BellIcon width={25 + "px"} />
             </div>
             {notification && <Notification></Notification>}
           </div>
           <div className="navigation__action-item">
-            <div onClick={handelMessage}>
-              <ChatIcon></ChatIcon>
+            <div onClick={handelMessage} >
+              <ChatIcon width={25 + "px"}></ChatIcon>
             </div>
             {message && <Message></Message>}
           </div>
           <div className="navigation__action-item">
-            <Avatar className="avatar-icon"></Avatar>
+            <Avatar size={30}>USER</Avatar>
           </div>
           <div className="navigation__action-item">
             <div onClick={handelMenuNav}>
-              <ExpandMoreIcon></ExpandMoreIcon>
+              <ChevronDoubleDownIcon width={25 + "px"}></ChevronDoubleDownIcon>
             </div>
             {menuNav && <MenuNav></MenuNav>}
           </div>

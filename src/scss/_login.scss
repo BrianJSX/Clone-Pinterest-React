@@ -1,0 +1,83 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/ed0b5df9-ba9d-4534-bd09-57993daeda56/d8140ec9-331f-4537-9743-62684296d353/VN-vi-20220214-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+
+    &-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+    }
+
+    &-content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.752);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    &-form {
+        margin: 10px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+        padding: 30px !important;
+        border-radius: 20px !important;
+    }
+
+    &-input {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 15px !important;
+
+        input {
+            padding: 10px !important;
+            border-radius: 10px !important
+        }
+    }
+
+    &-action {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        &-check {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100% !important;
+                padding: 20px !important;
+                background-color: red !important;
+                border-radius: 15px !important;
+                outline: none !important;
+                border: none !important;
+            }
+        }
+    }
+}

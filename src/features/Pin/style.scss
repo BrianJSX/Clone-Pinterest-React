@@ -2,12 +2,11 @@
     position: relative;
     margin: .5rem .2rem 0 0;
     z-index: 1;
-    margin-top: 5rem;
+    margin-top: 1rem;
 
     &__image:hover~&__icon { 
         opacity: 1;
         transition: all 1s;
-
     }
 
     &__image { 

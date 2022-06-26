@@ -1,6 +1,4 @@
 import React from "react";
-import PublishIcon from "@material-ui/icons/Publish";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 import "./style.scss";
 
@@ -17,10 +15,10 @@ function Pin(props) {
           Lưu
         </a>
         <a className="pin__icon--download" href="#">
-          <PublishIcon></PublishIcon>
+          {/* <PublishIcon></PublishIcon> */}
         </a>
         <a className="pin__icon--action" href="#">
-          <MoreHorizIcon></MoreHorizIcon>
+          {/* <MoreHorizIcon></MoreHorizIcon> */}
         </a>
       </div>
     </div>

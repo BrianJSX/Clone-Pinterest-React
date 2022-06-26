@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.scss";
-import Header from "./components/Header";
 import UiLoading from "./features/UiLoading";
-import ROUTER from "./router";
+import Home from "./pages/Home";
+import LoginPage from "./pages/LoginPage";
+import "./scss/app.scss";
+import MainLayout from "./layout/MainLayout";
+import RegisterPage from "./pages/RegisterPage";
+
 
 export default function App() {
   const [loading, setLoading] = useState("");
@@ -18,21 +21,21 @@ export default function App() {
   });
 
   return (
-    <div>
+    <div style={{ width: 100 + "%", height: 100 + "%" }}>
       <Router>
-        <Header></Header>
         {loading && <UiLoading></UiLoading>}
         <Switch>
-          {ROUTER.map((route, index) => {
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                component={route.component}
-                exact={route.exact}
-              ></Route>
-            );
-          })}
+          <Route path="/login">
+            <LoginPage></LoginPage>
+          </Route>
+          <Route path="/register">
+            <RegisterPage></RegisterPage>
+          </Route>
+          <MainLayout>
+            <Route path="/" exact>
+              <Home></Home>
+            </Route>
+          </MainLayout>
         </Switch>
       </Router>
     </div>

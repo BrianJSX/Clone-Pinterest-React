@@ -1,10 +1,10 @@
 import React from 'react'
+import FormLogin from '../features/FormLogin'
 
 export default function FlowPage() {
     return (
-        <div>
-            <h1> Flow Page</h1>
-            sadsadsadsa
+        <div className='mt-36'>
+           <FormLogin></FormLogin>
         </div>
     )
 }

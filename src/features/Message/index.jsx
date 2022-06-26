@@ -1,7 +1,7 @@
 import React from "react";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import EditIcon from "@material-ui/icons/Edit";
-import SearchIcon from "@material-ui/icons/Search";
+// import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+// import EditIcon from "@material-ui/icons/Edit";
+// import SearchIcon from "@material-ui/icons/Search";
 import "./style.scss";
 
 export default function Message() {
@@ -12,10 +12,10 @@ export default function Message() {
         <div className="message__header__text">Hộp thư đến</div>
         <div className="message__header__action">
           <div className="message__header__action-item">
-            <MoreHorizIcon></MoreHorizIcon>
+            {/* <MoreHorizIcon></MoreHorizIcon> */}
           </div>
           <div className="message__header__action-item">
-            <EditIcon></EditIcon>
+            {/* <EditIcon></EditIcon> */}
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@ export default function Message() {
       </div>
       <div className="message__search">
         <div className="message__search-icon">
-          <SearchIcon></SearchIcon>
+          {/* <SearchIcon></SearchIcon> */}
         </div>
         <div className="message__search-input">
           <input type="text" placeholder="Tìm kiếm" className="input-search" />

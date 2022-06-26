@@ -1,4 +1,4 @@
-import SearchIcon from "@material-ui/icons/Search";
+// import SearchIcon from "@material-ui/icons/Search";
 import React from "react";
 import { useDispatch } from "react-redux";
 import {fetchPinSearch} from "../Pin/pinSlice";
@@ -15,7 +15,7 @@ export default function SearchForm() {
   return (
     <div className="navigation__search">
       <div className="navigation__search-icon">
-        <SearchIcon></SearchIcon>
+        {/* <SearchIcon></SearchIcon> */}
       </div>
       <div className="navigation__search-input">
         <input

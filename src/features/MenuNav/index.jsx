@@ -1,7 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./style.scss";
 
 function MenuNav() {
+  const router = useHistory();
+
+  const handleLogout = () => { 
+    localStorage.clear();
+    router.push("/login");
+  }
+
   return (
     <div className="MenuNav">
       <div className="MenuNav__title">
@@ -16,7 +24,7 @@ function MenuNav() {
         </div>
       </div>
       <div className="MenuNav__title">
-        <p>Tùy chọn khác</p>
+        <div>Tùy chọn khác</div>
       </div>
       <div className="MenuNav__main">
         <div className="MenuNav__main-item">
@@ -31,7 +39,7 @@ function MenuNav() {
         <div className="MenuNav__main-item">
             Nhận trợ giúp
         </div>
-        <div className="MenuNav__main-item">
+        <div className="MenuNav__main-item" onClick={handleLogout}>
             Đăng xuất
         </div>
       </div>
